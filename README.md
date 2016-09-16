@@ -6,6 +6,12 @@ Docker Image packaging for FuelPHP
 docker pull hiro511/fuelphp
 ```
 
+## Start a FuelPHP project simply
+```
+docker run -d -p 80:80 --name fuel -v your-fuelphp-project/app:/var/www/html/fuel/fuel/app hiro511/fuelphp
+```
+
+
 ## Create a Dockerfile in your FuelPHP project
 
 ``` dockerfile
@@ -26,5 +32,5 @@ docker run -d -p 80:80 -name fuel some-fuelphp
 If you want to mount your project, the folloing commands is useful.
 
 ```
-docker run -d -p 80:80 --name fuel -v your-fuelphp-project/app:/var/html/www/fuel/fuel/app some-fuelphp
+docker run -d -p 80:80 --name fuel -v your-fuelphp-project/app:/var/www/html/fuel/fuel/app some-fuelphp
 ```
