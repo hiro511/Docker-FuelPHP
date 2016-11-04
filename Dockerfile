@@ -6,6 +6,10 @@ MAINTAINER Hiroaki Egashira
 RUN apt-get update && apt-get install -y \
     git \
     zip \
+ && docker-php-ext-install \
+     pdo_mysql \
+     mysqli \
+     mbstring \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/fuel/fuel.git -b 1.8/master \
